@@ -5,6 +5,7 @@ using UnityEngine;
 public class GroundPound : MonoBehaviour
 {
     private PlayerStatuses status;
+    private Animator anim;
 
     [SerializeField] private float dropSpeed;
     private bool pounding;
@@ -14,6 +15,8 @@ public class GroundPound : MonoBehaviour
         dropSpeed = -30f;
         pounding = false;
         status = FindObjectOfType<PlayerStatuses>();
+        anim = GetComponent<Animator>();
+        anim.SetBool("Pounding", false);
     }
 
     // Update is called once per frame
@@ -22,6 +25,8 @@ public class GroundPound : MonoBehaviour
         if (!status.getGrounded() && Input.GetButtonDown("GroundPound"))
         {
             pounding = true;
+            anim.SetBool("Pounding", pounding);
+
         }
     }
 
@@ -36,6 +41,7 @@ public class GroundPound : MonoBehaviour
         if (status.getGrounded())
         {
             pounding = false;
+            anim.SetBool("Pounding", pounding);
         }
     }
 }
