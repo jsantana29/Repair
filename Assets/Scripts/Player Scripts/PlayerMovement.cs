@@ -7,7 +7,7 @@ public class PlayerMovement : MonoBehaviour
     private float playerVelocity;
     public float testSpeed;
     //public float maxSpeed;
-    private float speedMulti = 0.8f;
+    private float speedMulti = 0.6f;
     private float drag = 0.8f;
 
     private float dragLimit = 1f;
