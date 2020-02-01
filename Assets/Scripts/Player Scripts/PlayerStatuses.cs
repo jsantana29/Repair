@@ -22,7 +22,7 @@ public class PlayerStatuses : MonoBehaviour
 
     //Movement speed values
     private float currentMaxSpeed;
-    private float sprintSpeed = 15f;
+    private float sprintSpeed = 20f;
     private float normalSpeed = 10f;
 
     //Terrain check radii
