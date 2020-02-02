@@ -29,6 +29,9 @@ public class PlayerStatuses : MonoBehaviour
     private float groundCheckRadius = 0.4f;
     private float wallCheckRadius = 0.1f;
 
+    //Status options
+    public bool isAlive = true;
+
 
 
     // Start is called before the first frame update
