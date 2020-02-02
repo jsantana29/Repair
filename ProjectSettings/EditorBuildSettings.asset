@@ -6,6 +6,12 @@ EditorBuildSettings:
   serializedVersion: 2
   m_Scenes:
   - enabled: 1
-    path: Assets/Scenes/SampleScene.unity
-    guid: 2cda990e2423bbf4892e6590ba056729
+    path: Assets/Scenes/Ice.unity
+    guid: 1597a6bd85762c14cbf9f60f7a155c92
+  - enabled: 1
+    path: Assets/Scenes/Tropical.unity
+    guid: 6bf25041d7da74a469db5e926d9778c9
+  - enabled: 1
+    path: Assets/Scenes/Magma.unity
+    guid: 2f5cd52c828c8d9428f559a0e7193eb0
   m_configObjects: {}

@@ -8,6 +8,7 @@ public class CheckDeath : MonoBehaviour
     private PlayerStatuses status;
     private Collider2D targetCollider;
     private Collider2D objectCollider;
+    public Transform spawn;
 
     void Start()
     {
@@ -43,6 +44,7 @@ public class CheckDeath : MonoBehaviour
         {
             status.isAlive = false;
             Debug.Log("Dead");
+            collider.transform.position = spawn.transform.position;
         }
     }
 }
