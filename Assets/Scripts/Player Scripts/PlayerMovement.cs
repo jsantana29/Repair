@@ -29,6 +29,7 @@ public class PlayerMovement : MonoBehaviour
         status = FindObjectOfType<PlayerStatuses>();
         //testSpeed = GetComponent<Rigidbody2D>().velocity.x;
         testSpeed = 0;
+        Debug.Log("Debug works");
     }
 
     // Update is called once per frame
