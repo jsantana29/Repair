@@ -19,6 +19,8 @@ public class PlayerStatuses : MonoBehaviour
     public bool hangingOffWall;
     public bool onCorner;
     public bool onCeiling;
+    public bool knocked;
+    public bool shootingDown;
 
     //Movement speed values
     private float currentMaxSpeed;
@@ -67,6 +69,25 @@ public class PlayerStatuses : MonoBehaviour
     public float getMaxSpeed()
     {
         return currentMaxSpeed;
+    }
+
+    public bool getKnocked()
+    {
+        return knocked;
+    }
+
+    public bool getShootDown()
+    {
+        return shootingDown;
+    }
+    public void setShootDown(bool shootingDown)
+    {
+        this.shootingDown = shootingDown;
+    }
+
+    public void setKnocked(bool knocked)
+    {
+        this.knocked = knocked;
     }
 
     public void setSprintSpeed()

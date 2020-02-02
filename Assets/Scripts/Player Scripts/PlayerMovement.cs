@@ -79,7 +79,7 @@ public class PlayerMovement : MonoBehaviour
 
 
 
-        if (Mathf.Abs(GetComponent<Rigidbody2D>().velocity.x) > status.getMaxSpeed())
+        if (Mathf.Abs(GetComponent<Rigidbody2D>().velocity.x) > status.getMaxSpeed() && !status.getKnocked())
         {
             //Subtracts player velocity when over max speed, keeping the net gain at 0
             //GetComponent<Rigidbody2D>().velocity = new Vector2(GetComponent<Rigidbody2D>().velocity.x - playerVelocity, GetComponent<Rigidbody2D>().velocity.y);
