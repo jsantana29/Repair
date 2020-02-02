@@ -9,6 +9,8 @@ public class CheckDeath : MonoBehaviour
     private Collider2D targetCollider;
     private Collider2D objectCollider;
 
+    public Transform spawn;
+
     void Start()
     {
         status = getObjectOfType<PlayerStatuses>(Target_Entity);
@@ -38,10 +40,12 @@ public class CheckDeath : MonoBehaviour
 
     void OnTriggerEnter2D(Collider2D collider)
     {
+
         //Debug.Log($"target collider: {targetCollider.name}, object collider: {objectCollider.name}, status: {status.name}, param {collider.name}");
         if (collider.name == targetCollider.name && collider.tag == targetCollider.tag)
         {
             status.isAlive = false;
+            collider.transform.position = spawn.transform.position;
             Debug.Log("Dead");
         }
     }
