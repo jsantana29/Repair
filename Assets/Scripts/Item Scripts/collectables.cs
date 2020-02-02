@@ -31,6 +31,8 @@ public class collectables : MonoBehaviour
         if (passedCollider.name == collider.name && passedCollider.tag == collider.tag) {
             hasCollected = true;
             Debug.Log($"item pickup: {itemCollider.name}");
+            Destroy(gameObject);
+            Debug.Log("E Z P Z");
         }
     }
 }
